@@ -20,9 +20,11 @@ class APODIntentHandler: NSObject, APODIntentHandling {
         let controller = ModelController<APODResponseModel>()
         controller.fetchMedia { (model) in
             if let model = model {
+                let activity = NSUserActivity(activityType: "APODIntent")
+                activity.userInfo = ["Hello":"World"]
                 if model.isImage {
-                    let activity = NSUserActivity(activityType: "APODIntent")
-                    activity.userInfo = ["Hello":"World"]
+                    completion(APODIntentResponse(code: .success, userActivity: activity))
+                } else if model.isImage {
                     completion(APODIntentResponse(code: .success, userActivity: activity))
                 } else {
                     completion(APODIntentResponse(code: .failureNoImage, userActivity: nil))

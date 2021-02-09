@@ -14,6 +14,7 @@ import WebKit
 class APODViewController: NAPIBaseViewController, INUIAddVoiceShortcutViewControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var apodTitle: UILabel!
     @IBOutlet weak var apodDescriptionTextView: UITextView!
     @IBOutlet weak var siriButton: UIButton!
@@ -27,8 +28,9 @@ class APODViewController: NAPIBaseViewController, INUIAddVoiceShortcutViewContro
         super.viewDidLoad()
         apodTitle.text = ""
         apodDescriptionTextView.text = "Loading..."
-        self.siriButton.isHidden = true
-        self.title = "APOD"
+        siriButton.isHidden = true
+        webView.isHidden = true
+        title = "APOD"
         
         INVoiceShortcutCenter.shared.getAllVoiceShortcuts { (shortcuts, error) in
             if error == nil {
@@ -71,16 +73,26 @@ class APODViewController: NAPIBaseViewController, INUIAddVoiceShortcutViewContro
 
     func serviceComplete(_ results:APODResponseModel?) {
         if let data = results {
-            self.controller.fetchData(fromUrl: data.url) { (data) in
-                guard
-                    let data = data,
-                    let image = UIImage(data: data)
-                    else { return }
+            DispatchQueue.main.async {
+                if data.isImage {
+                    self.webView.isHidden = true
+                    self.imageView.isHidden = false
+                    self.controller.fetchData(fromUrl: data.url) { (data) in
+                        guard
+                            let data = data,
+                            let image = UIImage(data: data)
+                            else { return }
 
-                DispatchQueue.main.async {
-                    self.imageView.image = image
-                    self.siriButton?.isEnabled = true
-                    self.siriButton.isHidden = self.apodShortcutIsActive
+                        DispatchQueue.main.async {
+                            self.imageView.image = image
+                            self.siriButton?.isEnabled = true
+                            self.siriButton.isHidden = self.apodShortcutIsActive
+                        }
+                    }
+                } else if data.isVideo {
+                    self.webView.isHidden = false
+                    self.imageView.isHidden = true
+                    self.webView.load(URLRequest(url: data.url))
                 }
             }
         }
@@ -141,4 +153,12 @@ class APODViewController: NAPIBaseViewController, INUIAddVoiceShortcutViewContro
         }
     }
     
+    fileprivate func loadVideo(videoURL: URL) {
+        // create a custom youtubeURL with the video ID
+//        guard
+//            let url = NSURL(string: "https://www.youtube.com/embed/\(videoID)")
+//            else { return }
+        // load your web request
+        webView.load(URLRequest(url: videoURL))
+    }
 }

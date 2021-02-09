@@ -91,11 +91,6 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="5Mt-5r-84L"/>
-                                        <exclude reference="Zll-sk-eNc"/>
-                                        <exclude reference="bpS-Jo-yzg"/>
-                                        <exclude reference="opw-fA-lFt"/>
-                                        <exclude reference="uS8-Qx-99W"/>
                                         <exclude reference="0i0-ds-ZEQ"/>
                                         <exclude reference="3Ym-2a-mxH"/>
                                         <exclude reference="LRO-d0-6fd"/>
@@ -106,15 +101,20 @@
                                         <exclude reference="Spp-n8-NnE"/>
                                         <exclude reference="ctP-2B-KVc"/>
                                         <exclude reference="oeB-xy-dMe"/>
+                                        <exclude reference="5Mt-5r-84L"/>
+                                        <exclude reference="Zll-sk-eNc"/>
+                                        <exclude reference="bpS-Jo-yzg"/>
+                                        <exclude reference="opw-fA-lFt"/>
+                                        <exclude reference="uS8-Qx-99W"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="bpS-Jo-yzg"/>
-                                        <include reference="opw-fA-lFt"/>
                                         <include reference="Spp-n8-NnE"/>
                                         <include reference="ctP-2B-KVc"/>
                                         <include reference="oeB-xy-dMe"/>
+                                        <include reference="bpS-Jo-yzg"/>
+                                        <include reference="opw-fA-lFt"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -130,17 +130,17 @@
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="5Mt-5r-84L"/>
-                                        <include reference="Zll-sk-eNc"/>
                                         <include reference="0i0-ds-ZEQ"/>
                                         <include reference="3Ym-2a-mxH"/>
+                                        <include reference="5Mt-5r-84L"/>
+                                        <include reference="Zll-sk-eNc"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="uS8-Qx-99W"/>
                                         <include reference="LRO-d0-6fd"/>
                                         <include reference="LdJ-r7-bcG"/>
+                                        <include reference="uS8-Qx-99W"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -159,6 +159,7 @@
                         <outlet property="apodTitle" destination="zOD-X2-JPE" id="Xm9-GM-clG"/>
                         <outlet property="imageView" destination="X9c-Uw-pPY" id="h6J-jM-yNj"/>
                         <outlet property="siriButton" destination="a4g-xo-5Nb" id="RmC-AB-pfg"/>
+                        <outlet property="webView" destination="dUx-bh-JWi" id="dkc-WZ-Zcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkM-By-tSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
