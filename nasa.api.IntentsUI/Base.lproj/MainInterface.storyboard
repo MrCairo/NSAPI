@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intent View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="IntentViewController" customModule="nasa_api_intentsUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-Ew-cj7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gN5-Kn-gt9">
+                                <rect key="frame" x="150" y="65" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="JUA-wb-di4"/>
+                                    <constraint firstAttribute="width" constant="20" id="rm4-dV-ApF"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="trailing" secondItem="vTT-Ew-cj7" secondAttribute="trailing" id="80o-it-Nmq"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="bottom" secondItem="vTT-Ew-cj7" secondAttribute="bottom" id="GLV-zQ-dzn"/>
+                            <constraint firstItem="vTT-Ew-cj7" firstAttribute="centerX" secondItem="4PN-XC-lEE" secondAttribute="centerX" id="UDF-z9-8Sv"/>
+                            <constraint firstItem="gN5-Kn-gt9" firstAttribute="centerY" secondItem="4PN-XC-lEE" secondAttribute="centerY" id="f35-oT-TJI"/>
+                            <constraint firstItem="vTT-Ew-cj7" firstAttribute="leading" secondItem="4PN-XC-lEE" secondAttribute="leading" id="krz-Ny-7Rd"/>
+                            <constraint firstItem="gN5-Kn-gt9" firstAttribute="centerX" secondItem="4PN-XC-lEE" secondAttribute="centerX" id="qKI-fQ-eVd"/>
+                            <constraint firstItem="vTT-Ew-cj7" firstAttribute="top" secondItem="4PN-XC-lEE" secondAttribute="top" id="seg-0F-YKg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4PN-XC-lEE"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="apodImageView" destination="vTT-Ew-cj7" id="XRn-dQ-0iS"/>
+                        <outlet property="apodLoadingIndicator" destination="gN5-Kn-gt9" id="LT6-zy-YKy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

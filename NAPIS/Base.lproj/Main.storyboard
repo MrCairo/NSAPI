@@ -1,24 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fAp-Cj-9er">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--NASA APIs-->
+        <scene sceneID="Epx-V3-aRR">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="NKp-1B-5c9" customClass="NAPIListingTableViewController" customModule="NAPIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="087-Ep-lfX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="napi_listing_cell" rowHeight="79" id="9Hk-Ht-VWj" customClass="NAPIListingTableViewCell" customModule="NAPIS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="79"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Hk-Ht-VWj" id="x0Z-CM-tMD">
+                                    <rect key="frame" x="0.0" y="0.0" width="347.66666666666669" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-Iu-gcv">
+                                            <rect key="frame" x="15" y="5" width="317.66666666666669" height="41"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9A-cd-64b">
+                                            <rect key="frame" x="15" y="56" width="317.66666666666669" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="z7e-je-RkV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="F9A-cd-64b" firstAttribute="top" secondItem="EdF-Iu-gcv" secondAttribute="bottom" constant="10" id="bIY-kd-K0M"/>
+                                        <constraint firstItem="F9A-cd-64b" firstAttribute="leading" secondItem="x0Z-CM-tMD" secondAttribute="leading" constant="15" id="hgD-oY-QjR"/>
+                                        <constraint firstAttribute="trailing" secondItem="F9A-cd-64b" secondAttribute="trailing" constant="15" id="jhI-zD-xce"/>
+                                        <constraint firstItem="EdF-Iu-gcv" firstAttribute="leading" secondItem="x0Z-CM-tMD" secondAttribute="leading" constant="15" id="kYM-s7-p4j"/>
+                                        <constraint firstItem="EdF-Iu-gcv" firstAttribute="top" secondItem="x0Z-CM-tMD" secondAttribute="top" constant="5" id="oca-yh-vtX"/>
+                                        <constraint firstAttribute="trailing" secondItem="EdF-Iu-gcv" secondAttribute="trailing" constant="15" id="qNZ-ZM-i4I"/>
+                                        <constraint firstAttribute="bottom" secondItem="F9A-cd-64b" secondAttribute="bottom" constant="5" id="x5Z-uS-L9j"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="apiFullNameLabel" destination="F9A-cd-64b" id="h3X-rf-1x8"/>
+                                    <outlet property="apiTitleLabel" destination="EdF-Iu-gcv" id="evo-bZ-5JU"/>
+                                    <segue destination="lBx-cE-AHb" kind="showDetail" identifier="SelectedAPISegue" id="Ool-Ev-IMl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NKp-1B-5c9" id="C51-qH-2Dt"/>
+                            <outlet property="delegate" destination="NKp-1B-5c9" id="1d7-Jv-hg6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="NASA APIs" id="Zvu-vN-9JB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TvI-Ru-csa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2044" y="517.24137931034488"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="j7l-p1-0vB">
+            <objects>
+                <viewController id="7E2-0w-pux" customClass="NAPIDetailViewController" customModule="NAPIS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wgs-5p-MgW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GtC-nJ-N32"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1XR-Fn-euh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dw4-UA-sq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2093.5999999999999" y="1277.5862068965519"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="fIF-ai-swj">
+            <objects>
+                <navigationController title="Detail" id="lBx-cE-AHb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sjK-tj-cRm">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7E2-0w-pux" kind="relationship" relationship="rootViewController" id="aFq-t4-OwZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ua-Cy-rh3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="1279"/>
+        </scene>
+        <!--NASA API List-->
+        <scene sceneID="Q7A-Bw-3l6">
+            <objects>
+                <navigationController title="NASA API List" id="C87-bU-tog" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jfx-G1-Lbg">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NKp-1B-5c9" kind="relationship" relationship="rootViewController" id="BeY-ih-piZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zn-lk-RoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="518"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Vje-Q6-AWy">
+            <objects>
+                <splitViewController id="fAp-Cj-9er" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="C87-bU-tog" kind="relationship" relationship="masterViewController" id="I3i-DH-2rc"/>
+                        <segue destination="lBx-cE-AHb" kind="relationship" relationship="detailViewController" id="k2R-EF-nvH"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xyk-uD-f6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="849"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ool-Ev-IMl"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
