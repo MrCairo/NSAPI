@@ -1,0 +1,13 @@
+
+{
+    "mainMenu": [
+        {
+            "title": "About",
+            "desc": "What is NAPIs anyhow?"
+        },
+        {
+            "title": "APOD",
+            "desc": "Astronomical Picture (or video) Of the Day"
+        }
+    ]
+}

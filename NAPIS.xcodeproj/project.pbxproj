@@ -37,8 +37,7 @@
 		4C08BAD521DA548F005A135D /* APODIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08BAD421DA548F005A135D /* APODIntentHandler.swift */; };
 		4C08BAD621DA54AD005A135D /* APODIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08BAD421DA548F005A135D /* APODIntentHandler.swift */; };
 		4C08BAD721DA54AE005A135D /* APODIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08BAD421DA548F005A135D /* APODIntentHandler.swift */; };
-		4C5A2A4D25D2EC0B00BAE18B /* MainNAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A2A4C25D2EC0B00BAE18B /* MainNAPI.swift */; };
-		4C5A2A5425D2EE3200BAE18B /* NAPIListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A2A5325D2EE3200BAE18B /* NAPIListingCell.swift */; };
+		4C5A2A5425D2EE3200BAE18B /* NAPIMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A2A5325D2EE3200BAE18B /* NAPIMenuCell.swift */; };
 		4C5A2A6A25D312C000BAE18B /* NAPIListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A2A6925D312C000BAE18B /* NAPIListingView.swift */; };
 		4C74954121D466F600144F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74954021D466F600144F0D /* AppDelegate.swift */; };
 		4C74954621D466F600144F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C74954421D466F600144F0D /* Main.storyboard */; };
@@ -51,6 +50,10 @@
 		4C797E4F21DDA345009AD114 /* BaseModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C797E4E21DDA345009AD114 /* BaseModelController.swift */; };
 		4C797E5021DDA3C0009AD114 /* BaseModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C797E4E21DDA345009AD114 /* BaseModelController.swift */; };
 		4C797E5121DDA3C1009AD114 /* BaseModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C797E4E21DDA345009AD114 /* BaseModelController.swift */; };
+		4CBB116325E82269003BCE8F /* NAPIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB116225E82269003BCE8F /* NAPIModels.swift */; };
+		4CBB116F25E8230F003BCE8F /* NAPIMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB116E25E8230F003BCE8F /* NAPIMenuList.swift */; };
+		4CFE727325E9D74700D28770 /* NAPIMainMenu.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CFE727225E9D74700D28770 /* NAPIMainMenu.json */; };
+		4CFE727F25E9D84000D28770 /* JSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE727E25E9D84000D28770 /* JSONHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,8 +128,7 @@
 		4C08BAD421DA548F005A135D /* APODIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODIntentHandler.swift; sourceTree = "<group>"; };
 		4C34FD41222F177600A9DA8A /* nasa.api.intents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nasa.api.intents.entitlements; sourceTree = "<group>"; };
 		4C34FD42222F177C00A9DA8A /* nasa.api.intentsUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nasa.api.intentsUI.entitlements; sourceTree = "<group>"; };
-		4C5A2A4C25D2EC0B00BAE18B /* MainNAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNAPI.swift; sourceTree = "<group>"; };
-		4C5A2A5325D2EE3200BAE18B /* NAPIListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAPIListingCell.swift; sourceTree = "<group>"; };
+		4C5A2A5325D2EE3200BAE18B /* NAPIMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAPIMenuCell.swift; sourceTree = "<group>"; };
 		4C5A2A6925D312C000BAE18B /* NAPIListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAPIListingView.swift; sourceTree = "<group>"; };
 		4C74953D21D466F600144F0D /* NAPIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NAPIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C74954021D466F600144F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,11 @@
 		4C74956521D466F700144F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C797E4C21DD7733009AD114 /* AddToSiriButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToSiriButton.swift; sourceTree = "<group>"; };
 		4C797E4E21DDA345009AD114 /* BaseModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelController.swift; sourceTree = "<group>"; };
+		4CBB116225E82269003BCE8F /* NAPIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAPIModels.swift; sourceTree = "<group>"; };
+		4CBB116E25E8230F003BCE8F /* NAPIMenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAPIMenuList.swift; sourceTree = "<group>"; };
+		4CFE726525E9C95B00D28770 /* NAPIMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NAPIMain.swift; sourceTree = "<group>"; };
+		4CFE727225E9D74700D28770 /* NAPIMainMenu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NAPIMainMenu.json; sourceTree = "<group>"; };
+		4CFE727E25E9D84000D28770 /* JSONHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,9 +244,8 @@
 		4C5A2A4B25D2EBAE00BAE18B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4C5A2A4C25D2EC0B00BAE18B /* MainNAPI.swift */,
-				4C5A2A5325D2EE3200BAE18B /* NAPIListingCell.swift */,
-				4C5A2A6925D312C000BAE18B /* NAPIListingView.swift */,
+				4CFE725025E927A400D28770 /* Screens */,
+				4CBB118425E82BAE003BCE8F /* Components */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -272,11 +278,14 @@
 		4C74953F21D466F600144F0D /* NAPIS */ = {
 			isa = PBXGroup;
 			children = (
+				4CFE728B25E9DEA100D28770 /* System */,
+				4CBB115525E81FE6003BCE8F /* Model */,
+				4CFE728A25E9DE8700D28770 /* Services */,
 				4C5A2A4B25D2EBAE00BAE18B /* UI */,
 				4C0382D621D6EEE8002FCDAB /* NAPIS.entitlements */,
 				4C74957321D4672400144F0D /* NAPIControllers */,
-				4C74957221D4671400144F0D /* Helpers */,
-				4C74954021D466F600144F0D /* AppDelegate.swift */,
+				4C74957221D4671400144F0D /* Utilities */,
+				4CFE727125E9D71200D28770 /* Resources */,
 				4C0382BB21D51EB2002FCDAB /* SplitViewDelegate.swift */,
 				4C0382D121D6359B002FCDAB /* NAPIDetailViewController.swift */,
 				4C74954421D466F600144F0D /* Main.storyboard */,
@@ -307,14 +316,14 @@
 			path = NAPISUITests;
 			sourceTree = "<group>";
 		};
-		4C74957221D4671400144F0D /* Helpers */ = {
+		4C74957221D4671400144F0D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				4C0382B321D4680A002FCDAB /* URL+Helpers.swift */,
-				4C0382AF21D467E1002FCDAB /* MediaInfoManager.swift */,
 				4C797E4E21DDA345009AD114 /* BaseModelController.swift */,
+				4CFE727E25E9D84000D28770 /* JSONHandler.swift */,
 			);
-			path = Helpers;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		4C74957321D4672400144F0D /* NAPIControllers */ = {
@@ -328,6 +337,56 @@
 				4C797E4C21DD7733009AD114 /* AddToSiriButton.swift */,
 			);
 			path = NAPIControllers;
+			sourceTree = "<group>";
+		};
+		4CBB115525E81FE6003BCE8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CBB116225E82269003BCE8F /* NAPIModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CBB118425E82BAE003BCE8F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4C5A2A5325D2EE3200BAE18B /* NAPIMenuCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4CFE725025E927A400D28770 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4CBB116E25E8230F003BCE8F /* NAPIMenuList.swift */,
+				4C5A2A6925D312C000BAE18B /* NAPIListingView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4CFE727125E9D71200D28770 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CFE727225E9D74700D28770 /* NAPIMainMenu.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4CFE728A25E9DE8700D28770 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4C0382AF21D467E1002FCDAB /* MediaInfoManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4CFE728B25E9DEA100D28770 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				4C74954021D466F600144F0D /* AppDelegate.swift */,
+				4CFE726525E9C95B00D28770 /* NAPIMain.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,6 +576,7 @@
 				4C74954B21D466F600144F0D /* Assets.xcassets in Resources */,
 				4C0382C321D55F4C002FCDAB /* APOD.storyboard in Resources */,
 				4C74954621D466F600144F0D /* Main.storyboard in Resources */,
+				4CFE727325E9D74700D28770 /* NAPIMainMenu.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,8 +631,9 @@
 			files = (
 				4C5A2A6A25D312C000BAE18B /* NAPIListingView.swift in Sources */,
 				4C0382B121D467E1002FCDAB /* MediaInfoManager.swift in Sources */,
+				4CBB116325E82269003BCE8F /* NAPIModels.swift in Sources */,
 				4C0382B421D4680A002FCDAB /* URL+Helpers.swift in Sources */,
-				4C5A2A4D25D2EC0B00BAE18B /* MainNAPI.swift in Sources */,
+				4CFE727F25E9D84000D28770 /* JSONHandler.swift in Sources */,
 				4C0382CE21D580A6002FCDAB /* NAPIBaseViewController.swift in Sources */,
 				4C74954921D466F600144F0D /* NAPIS.xcdatamodeld in Sources */,
 				4C797E4D21DD7733009AD114 /* AddToSiriButton.swift in Sources */,
@@ -581,8 +642,9 @@
 				4C0382B621D4FFFB002FCDAB /* NAPIListingTableViewController.swift in Sources */,
 				4C0382BC21D51EB2002FCDAB /* SplitViewDelegate.swift in Sources */,
 				4C0382C821D56722002FCDAB /* AboutViewController.swift in Sources */,
+				4CBB116F25E8230F003BCE8F /* NAPIMenuList.swift in Sources */,
 				4C0382C521D562AB002FCDAB /* APODModel.swift in Sources */,
-				4C5A2A5425D2EE3200BAE18B /* NAPIListingCell.swift in Sources */,
+				4C5A2A5425D2EE3200BAE18B /* NAPIMenuCell.swift in Sources */,
 				4C74954121D466F600144F0D /* AppDelegate.swift in Sources */,
 				4C0382D221D6359B002FCDAB /* NAPIDetailViewController.swift in Sources */,
 				4C0382B821D502F1002FCDAB /* NAPIListingTableViewCell.swift in Sources */,
